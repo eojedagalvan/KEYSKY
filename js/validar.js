@@ -1,5 +1,5 @@
 function validarUsuarioExistente() {
-  var correo, contrasena, expresion;
+  var correo, clave, expresion;
   correo = document.getElementById("correo").value;
   clave = document.getElementById("clave").value;
 
