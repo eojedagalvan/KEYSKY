@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>KEYSKY: CREAR CUENTA</title>
+    <link rel="stylesheet" href="../css/usuarios.css">
+    <link rel="shortcut icon" href="../images/KEYSKY.jpg"/>
+  </head>
+  <body>
+    <div class="registros">
+    <img  class="LOGO" src="../IMAGES/KEYSKY 4.jpg" alt="Logo">
+    <h1>CREA TU CUENTA</h1>
+    <form id="uno" action="usuarios.php" method="get">
+      <label>Nombre</label>
+      <input type="text" id="nom" name="nombre" placeholder="Ingresa tu nombre" required>
+      <br/>
+      <label>Apellidos</label>
+      <input type="text" id="ape" name="apellido" placeholder="Ingresa tus apellidos" required>
+      <br/>
+      <!--<label>Sexo:</label>
+      <br/>
+      <input type="radio" name="HM" value="H">Hombre
+      <input type="radio" name="HM" value="H">Mujer
+      <br/><br/>-->
+      <label>Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="00-00-00-00-00" required>
+      <br/>
+
+      <label>Correo</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required>
+      <br/>
+
+      <label>Contraseña</label>
+      <input type="password" id="contra" name="contra" placeholder="Ingresa tu contraseña" required>
+      <br/>
+
+      <label id="conf">Confirma la contraseña</label>
+      <input type="password" id="contra2" name="contra" placeholder="Reafirma tu contraseña" required>
+      <br/>
+
+      <input type="submit" id="boton" value="Enviar">
+    </form>
+    </div>
+  </body>
+</html>
