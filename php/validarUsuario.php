@@ -1,14 +1,21 @@
 <?php
 include 'connect.php';
+// include '../js/validar.js';
 $correo = $_POST["correo"];
-$contraseña = $_POST["pass"];
+$clave = $_POST["clave"];
 
-$resultado = mysqli_query($conexion, $insertar);
+$consulta  = "SELECT * from usuarios where correo = '$correo' and clave = '$clave'";
+$resultado = mysqli_query($conexion, $consulta);
+$filas = mysqli_num_rows($resultado);
 
-if(!$resultado) {
-  echo 'Error al registrarse';
-} else {
-  echo 'Usuario registrado exitosamente';
+if($filas > 0) {
+  header("location:../html/inicio.html");
+}
+else {
+  echo '<script>';
+  echo 'denegarUsuario();';
+  echo "</script>";
 }
 
+mysqli_free_result($resultado);
 mysqli_close($conexion);

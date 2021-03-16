@@ -21,5 +21,8 @@ expresion = /\w+@\w+\.+[a-z]/;
     alert("La contraseña debe de ser entre 8 - 16 caracteres");
     return false;
   }
+}
 
+function denegarUsuario() {
+  alert("Usuario no registrado");
 }
