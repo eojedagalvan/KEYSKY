@@ -21,6 +21,7 @@ body
   position: absolute;
   box-sizing: border-box;
   border-radius: 50px;
+  box-shadow: 2px 2px 2px #999;
 }
 
 .registros form

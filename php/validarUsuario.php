@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-// include '../js/validar.js';
+
 $correo = $_POST["correo"];
 $clave = $_POST["clave"];
 
@@ -9,12 +9,11 @@ $resultado = mysqli_query($conexion, $consulta);
 $filas = mysqli_num_rows($resultado);
 
 if($filas > 0) {
-  header("location:../html/inicio.html");
+  // header("location:../html/inicio.html");
+  return $resultado;
 }
 else {
-  echo '<script>';
-  echo 'denegarUsuario();';
-  echo "</script>";
+  echo 'Acceso denegado';
 }
 
 mysqli_free_result($resultado);
