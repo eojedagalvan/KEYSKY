@@ -1,18 +1,22 @@
 <?php
 include 'connect.php';
 
-$correo = $_POST["correo"];
-$clave = $_POST["clave"];
+$correo = $conexion->real_escape_string($_POST["correo"]);
+$clave = $conexion->real_escape_string($_POST["clave"]);
 
 $consulta  = "SELECT * from usuarios where correo = '$correo' and clave = '$clave'";
+
 $resultado = mysqli_query($conexion, $consulta);
 $filas = mysqli_num_rows($resultado);
 
+if($conexion->error){
+  die($conexion->error);
+}
 if($filas > 0) {
-  // header("location:../html/inicio.html");
-  return $resultado;
+  echo 'Credenciales correctas';
 }
 else {
+  http_response_code(401);
   echo 'Acceso denegado';
 }
 

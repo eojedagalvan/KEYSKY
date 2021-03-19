@@ -13,12 +13,14 @@ loginForm.addEventListener("submit", function (evento) {
   formData.append("clave", clave);
 
   axios
-    .post("/validarUsuario.php", formData)
+    .post("php/validarUsuario.php", formData)
     .then(function (respuesta) {
       alert(respuesta.data);
     })
-    .catch(function (error) {
-      alert(respuesta.data);
+    .catch(function () {
+      loginError.classList.remove("hide");
+      loginForm.classList.add("login-box-error")
+      loginError.innerText = "Usuario no encontrado";
     });
 });
 
