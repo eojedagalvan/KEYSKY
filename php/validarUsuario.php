@@ -14,14 +14,18 @@ if($conexion->error){
 }
 
 if($filas > 0) {
-  // echo 'Credenciales correctas';
-  // $usuario = "SELECT usuario from usuarios where correo = '$correo' and clave = '$clave'";
-  header("Location:../html/inicio.html");
+  echo 'Credenciales correctas';
+  $consultarUsuario = "SELECT nombre from usuarios where correo = '$correo' and clave = '$clave'";
+  $consulta = mysqli_query($conexion, $consultarUsuario);
+  $fila = $consulta->fetch_assoc();
+  $usuario = $fila["nombre"];
+  session_start();
+  $_SESSION['usuario'] = $usuario;
 }
 else {
   http_response_code(401);
   echo 'Acceso denegado';
 }
 
-mysqli_free_result($resultado);
+mysqli_free_result($resultado, $consulta);
 mysqli_close($conexion);

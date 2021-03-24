@@ -1,3 +1,13 @@
+<?php
+session_start();
+error_reporting(0);
+$varsesion = $_SESSION['usuario'];
+
+if($varsesion != null){
+  header("Location: ../php/inicio.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -37,6 +47,6 @@
       <a href="#">Recuperar Contraseña</a>
     </div>
   </body>
-  <script src="js/validar.js"></script>
-  <script src="js/axios.min.js"></script>
 </html>
+<script src="js/validar.js"></script>
+<script src="js/axios.min.js"></script>
