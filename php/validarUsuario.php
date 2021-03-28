@@ -15,12 +15,14 @@ if($conexion->error){
 
 if($filas > 0) {
   echo 'Credenciales correctas';
-  $consultarUsuario = "SELECT nombre from usuarios where correo = '$correo' and clave = '$clave'";
+  $consultarUsuario = "SELECT Nombre, Apellido from usuarios where correo = '$correo' and clave = '$clave'";
   $consulta = mysqli_query($conexion, $consultarUsuario);
   $fila = $consulta->fetch_assoc();
-  $usuario = $fila["nombre"];
+  $nombre = $fila["Nombre"];
+  $apellido = $fila["Apellido"];
   session_start();
-  $_SESSION['usuario'] = $usuario;
+  $_SESSION['Nombre'] = $nombre;
+  $_SESSION['Apellido'] = $apellido;
 }
 else {
   http_response_code(401);

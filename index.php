@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-$varsesion = $_SESSION['usuario'];
+$varsesion = $_SESSION['Nombre'];
 
 if($varsesion != null){
   header("Location: ../php/inicio.php");

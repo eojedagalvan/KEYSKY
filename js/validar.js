@@ -21,7 +21,7 @@ loginForm.addEventListener("submit", function (evento) {
     .catch(function () {
       loginError.classList.remove("hide");
       loginForm.classList.add("login-box-error");
-      loginError.innerText = "Usuario no encontrado";
+      loginError.innerText = "Usuario o contraseña incorrectos";
     });
 });
 
