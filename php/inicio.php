@@ -1,7 +1,9 @@
 <?php
+  include 'connect.php';
   session_start();
   error_reporting(0);
   $varsesion = $_SESSION['Nombre'];
+  $lugares = "select DISTINCT Ubicación from alojamientos";
 
   if($varsesion == null || $varsesion = ''){
     echo 'Usted no tiene autorización';
@@ -68,7 +70,10 @@
            <label for="ubicacion">Ubicación</label>
              <select class="opciones lugares" name="">
                <option value="">Lugares</option>
-                <option value="">Tapalpa</option>
+               <?php $resultado =  mysqli_query($conexion, $lugares);
+               while ($row = mysqli_fetch_assoc($resultado)) { ?>
+                 <option value=""><?php echo $row["Ubicación"]?></option>
+               <?php }   ?>
              </select>
           <label for="llegada">Llegada</label>
           <input type="date" name="llegada" value="" class="opciones fecha" min="<?php echo date("Y-m-d");?>">
@@ -79,5 +84,9 @@
           <input type="submit" name="" value="Buscar" class="submit">
       </form>
     </section>
+    <footer>
+      <p>© 2021 KEYSKY, Inc. All rights reserved</p>
+    </footer>
   </body>
+
 </html>

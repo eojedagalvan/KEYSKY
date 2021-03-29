@@ -220,7 +220,6 @@ a {
 
 .busqueda {
   position: relative;
-  margin-bottom: -4px;
 }
 .busqueda img {
   width: 100%;
@@ -233,7 +232,7 @@ a {
   transform: translateX(-15%) translateY(-20%);
   background: #fff;
   padding: 25px;
-  width: 30%;
+  width: 400px;
   border-radius: 15px;
 }
 
@@ -276,16 +275,4 @@ a {
   padding: 8px;
   width: 95%;
   border-radius: 8px;
-}
-
-footer {
-  width: 100%;
-  margin: 0;
-  color: #fff;
-  background: #277eb8;
-}
-
-footer p {
-  margin: 0;
-  padding: 50px;
 }
