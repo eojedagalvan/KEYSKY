@@ -68,7 +68,7 @@
            privadas, perfectos para cualquier viaje.</p>
            <label for="ubicacion">Ubicación</label>
              <select class="opciones lugares" name="">
-               <option value="">Cualquiera</option>
+               <option value="">Todos los destinos</option>
                <?php $resultado =  mysqli_query($conexion, $lugares);
                while ($row = mysqli_fetch_assoc($resultado)) { ?>
                  <option value=""><?php echo $row["Ubicación"]?></option>

@@ -44,7 +44,6 @@ function validarUsuarioExistente(correo, clave) {
   } else if (clave.length < 8 || clave.length > 16) {
     loginError.classList.remove("hide");
     loginError.innerText = "La contraseña debe de ser entre 8 - 16 caracteres";
-
     return false;
   }
   return true;
