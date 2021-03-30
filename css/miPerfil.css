@@ -194,7 +194,7 @@ input {
   padding: 10px 0px;
 }
 
-#modificar {
+.boton {
   display: block;
   margin: 20px auto 0px auto;
   color: #fff;
@@ -204,4 +204,22 @@ input {
   width: 50%;
   border: none;
   border-radius: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  color: red;
+  padding-left: 20px;
+}
+
+.error::before{
+  content: "*";
+}
+
+.izquierda {
+  margin-right: 0;
+  width: 30%;
 }

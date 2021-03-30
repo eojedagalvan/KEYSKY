@@ -53,16 +53,18 @@
           <legend>Mis datos personales</legend>
           <form class=""  method="post" id="form-modificar">
           <label for="nombre">Nombre: </label>
-          <input type="text" name="nombre" class="campo" value="<?php echo $_SESSION['Nombre'] ?>" required disabled>
+          <input type="text" name="nombre" class="campo" id="nombre" value="<?php echo $_SESSION['Nombre'] ?>" required disabled>
           <label for="apellido">Apellido: </label>
-          <input type="text" name="apellido" class="campo" value="<?php echo $_SESSION['Apellido'] ?>" required disabled>
+          <input type="text" name="apellido" class="campo" id="apellido" value="<?php echo $_SESSION['Apellido'] ?>" required disabled>
           <label for="correo">Correo: </label>
-          <input type="email" name="correo" class="campo" value="<?php echo $correo ?>" required disabled>
+          <input type="email" name="correo" class="campo" id="correo" value="<?php echo $correo ?>" required disabled>
           <label for="clave">Contraseña: </label>
-          <input type="password" name="password" class="campo" value="•	•	•	•	" required disabled>
+          <input type="password" name="password" class="campo" id="clave" value="<?php echo $clave ?>" required disabled>
           <label for="tel">Teléfono: </label>
-          <input type="tel" name="Teléfono" class="campo" value="<?php echo $tel ?>" required disabled>
-          <button type="submit" name="button" id="modificar">Modificar datos</button>
+          <input type="tel" name="telefono" class="campo" id="tel" value="<?php echo $tel ?>" required disabled>
+          <p class="error hide"></p>
+          <button type="click" name="button" class="boton" id="modificar">Modificar datos</button>
+          <button type="submit" name="button" class="boton izquierda hide" id="confirmar" onclick="guardarCambios();">Guardar cambios</button>
         </form>
         </fieldset>
     </section>
