@@ -53,15 +53,15 @@
           <legend>Mis datos personales</legend>
           <form class=""  method="post" id="form-modificar">
           <label for="nombre">Nombre: </label>
-          <input type="text" name="nombre" class="campo" value="" required disabled placeholder="<?php echo $_SESSION['Nombre'] ?>">
+          <input type="text" name="nombre" class="campo" value="<?php echo $_SESSION['Nombre'] ?>" required disabled>
           <label for="apellido">Apellido: </label>
-          <input type="text" name="apellido" class="campo" value="" required disabled placeholder="<?php echo $_SESSION['Apellido'] ?>">
+          <input type="text" name="apellido" class="campo" value="<?php echo $_SESSION['Apellido'] ?>" required disabled>
           <label for="correo">Correo: </label>
-          <input type="email" name="correo" class="campo" value="" required disabled placeholder="<?php echo $correo ?>">
+          <input type="email" name="correo" class="campo" value="<?php echo $correo ?>" required disabled>
           <label for="clave">Contraseña: </label>
-          <input type="password" name="password" class="campo" value="" required disabled placeholder="**********">
+          <input type="password" name="password" class="campo" value="•	•	•	•	" required disabled>
           <label for="tel">Teléfono: </label>
-          <input type="tel" name="Teléfono" class="campo" value="" required disabled placeholder="<?php echo $tel ?>">
+          <input type="tel" name="Teléfono" class="campo" value="<?php echo $tel ?>" required disabled>
           <button type="submit" name="button" id="modificar">Modificar datos</button>
         </form>
         </fieldset>
