@@ -1,7 +1,7 @@
 const login_form = document.getElementById('form-modificar');
 const campos = document.getElementsByClassName('campo');
 const boton = document.getElementById('modificar');
-const confirmar = document.getElementById('confirmar');
+const confirmar = document.querySelector('#confirmar');
 const error = document.querySelector('.error');
 const tel = document.getElementById('tel');
 const nombre = document.getElementById('nombre');
@@ -28,7 +28,7 @@ function soloLetras(e){
   }
 }
 
-login_form.addEventListener("click", function (evento) {
+boton.addEventListener("click", function (evento) {
   evento.preventDefault();
   for (i = 0; i < campos.length; i++) {
     campos[i].disabled = false;
@@ -37,9 +37,8 @@ login_form.addEventListener("click", function (evento) {
   confirmar.classList.remove('hide');
 });
 
-
-function guardarCambios() {
-
+confirmar.addEventListener("click", function (evento) {
+  evento.preventDefault();
   const nombre = document.querySelector("#nombre").value;
   const apellido = document.querySelector("#apellido").value;
   const correo = document.querySelector("#correo").value;
@@ -48,22 +47,23 @@ function guardarCambios() {
 
   if (!validarInformacion(nombre, apellido, correo, clave, tel)) return;
 
-  // const formData = new FormData();
-  // formData.append("correo", correo);
-  // formData.append("clave", clave);
-  //
-  // axios
-  // .post("php/validarUsuario.php", formData)
-  // .then(function (respuesta) {
-  //   // alert(respuesta.data);
-  //   document.location.href= '../php/inicio.php';
-  // })
-  // .catch(function () {
-  //   error.classList.remove("hide");
-  //   loginForm.classList.add("login-box-error");
-  //   error.innerText = "Usuario o contraseña incorrectos";
-  // });
-}
+  const formData = new FormData();
+  formData.append("correo", correo);
+  formData.append("clave", clave);
+  formData.append("nombre", nombre);
+  formData.append("apellido", apellido);
+  formData.append("tel", tel);
+
+  axios
+  .post("php/actualizarDatos.php", formData)
+  .then(function () {
+    document.location.href= '../php/miPerfil.php';
+  })
+  .catch(function () {
+    error.classList.remove("hide");
+    error.innerText = "Usuario o contraseña incorrectos";
+  });
+});
 
 function validarInformacion(nombre, apellido, correo, clave, tel) {
   var expresion;
@@ -85,9 +85,6 @@ function validarInformacion(nombre, apellido, correo, clave, tel) {
       error.classList.remove("hide");
       error.innerText = "La contraseña debe de ser entre 8 - 16 caracteres";
       return false;
-  } else if (tel === []){
-
   }
-
   return true;
 }

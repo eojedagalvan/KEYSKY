@@ -64,7 +64,7 @@
           <input type="tel" name="telefono" class="campo" id="tel" value="<?php echo $tel ?>" required disabled>
           <p class="error hide"></p>
           <button type="click" name="button" class="boton" id="modificar">Modificar datos</button>
-          <button type="submit" name="button" class="boton izquierda hide" id="confirmar" onclick="guardarCambios();">Guardar cambios</button>
+          <button type="submit" name="button" class="boton izquierda hide" id="confirmar">Guardar cambios</button>
         </form>
         </fieldset>
     </section>
