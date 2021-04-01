@@ -65,9 +65,11 @@
           <p class="error hide"></p>
           <button type="click" name="button" class="boton" id="modificar">Modificar datos</button>
           <button type="submit" name="button" class="boton izquierda hide" id="confirmar">Guardar cambios</button>
+          <button type="click" name="button" class="boton  izquierda cancelar hide" id="cancelar">Cancelar</button>
         </form>
         </fieldset>
     </section>
   </body>
   <script src="../js/validarInfo.js"></script>
+  <script src="../js/axios.min.js"></script>
 </html>
