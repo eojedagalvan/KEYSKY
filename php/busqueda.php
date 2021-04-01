@@ -14,7 +14,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="shortcut icon" href="../images/KEYSKY.jpg" />
+    <title>Búsqueda</title>
   </head>
   <body>
 

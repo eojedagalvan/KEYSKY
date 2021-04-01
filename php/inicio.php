@@ -62,7 +62,7 @@
     </section>
     <section class="busqueda">
       <img src="../images/inicio/1.jpg" alt="inicio">
-      <form class="" action="../php/busqueda.php" method="post">
+      <form class="" action="../php/busqueda.php" method="post" id="buscar">
         <h1>Busca alojamientos en KEYSKY</h1>
         <p>Descubre alojamientos enteros y habitaciones
            privadas, perfectos para cualquier viaje.</p>
@@ -80,7 +80,7 @@
           <label for="salida">Salida</label>
           <br>
           <input type="date" name="salida" value="" class="opciones fecha" min="<?php echo date("Y-m-d");?>" id="fechaTermino" required>
-          <input type="submit" name="" value="Buscar" class="submit" onclick="ValidarFiltroDeFechas('fechaInicio', 'fechaTermino');">
+          <input type="submit" name="" value="Buscar" class="submit">
       </form>
     </section>
     <footer>
