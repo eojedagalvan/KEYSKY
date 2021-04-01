@@ -10,7 +10,7 @@
     <div class="registros">
     <img  class="LOGO" src="../IMAGES/KEYSKY 4.jpg" alt="Logo">
     <h1>CREA TU CUENTA</h1>
-    <form id="uno" action="usuarios.php" method="post">
+    <form id="uno" method="post">
       <label>Nombre</label>
       <input type="text" id="nom" name="nombre" placeholder="Ingresa tu nombre" required>
       <br/>
@@ -33,8 +33,12 @@
       <input type="password" id="contra2" name="contra" placeholder="Reafirma tu contraseña" required>
       <br/>
 
+      <p class="login-error hide"></p>
+
       <input type="submit" id="boton" value="Enviar">
     </form>
     </div>
   </body>
+  <script src="../js/usuarioNuevo.js"></script>
+  <script src="../js/axios.min.js"></script>
 </html>
