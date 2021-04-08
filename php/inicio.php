@@ -62,16 +62,16 @@
     </section>
     <section class="busqueda">
       <img src="../images/inicio/1.jpg" alt="inicio">
-      <form class="" action="../php/busqueda.php" method="post" id="buscar">
+      <form class="" method="post" id="buscar" action="busqueda.php">
         <h1>Busca alojamientos en KEYSKY</h1>
         <p>Descubre alojamientos enteros y habitaciones
            privadas, perfectos para cualquier viaje.</p>
            <label for="ubicacion">Ubicación</label>
-             <select class="opciones lugares" name="">
+             <select class="opciones lugares" name="lugar">
                <option value="">Todos los destinos</option>
                <?php $resultado =  mysqli_query($conexion, $lugares);
                while ($row = mysqli_fetch_assoc($resultado)) { ?>
-                 <option value=""><?php echo $row["Ubicación"]?></option>
+                 <option value="<?php echo $row["Ubicación"]?>"><?php echo $row["Ubicación"]?></option>
                <?php }   ?>
              </select>
           <label for="llegada">Llegada</label>
