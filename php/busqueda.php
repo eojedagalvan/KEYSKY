@@ -88,15 +88,10 @@
                 continue 2;
               }
             }
-          }
-          $imagen = "select imagen
-          from Imagen
-          where Id_Alojamiento = '$idAlojamiento'";
-          $resultadoImg = mysqli_query($conexion, $imagen);
-          $filas = mysqli_fetch_assoc($resultadoImg);
-          $imagen = $filas["imagen"];?>
-          <section class="alojamiento">
-            <img src="../images/alojamientos/<?php echo $imagen; ?>/1.jpg" alt="">
+          }?>
+          <a href="detallesAlojamiento.php?Id=<?php echo $idAlojamiento?>">
+            <section class="alojamiento">
+            <img src="../images/alojamientos/<?php echo $row["Nombre"]; ?>/1.jpg" alt="">
             <article class="info">
               <h5><?php echo $row["Ubicación"] ?></h5>
               <h2><?php echo $row["Nombre"] ?></h2>
@@ -104,6 +99,7 @@
               <h3>$<?php echo $row["Costo"] ?> MXN / noche</h3>
             </article>
           </section>
+        </a>
         <?php } ?>
     </section>
   </body>
