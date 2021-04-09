@@ -195,7 +195,6 @@ h4::before {
 p {
   text-align: justify;
   width: 85%;
-  /* border-bottom: solid 1px #999; */
   padding-bottom: 20px;
   font-size: 20px;
 }
@@ -208,41 +207,91 @@ h3 {
   display: inline-block;
 }
 
-.informacion {
-  background: red;
-}
-
 .descripcion {
-  background: blue;
   width: 60%;
   display: inline-block;
 }
 
 .resumen {
-  background: green;
+  background: #277eb8;
   display: inline-block;
   width: 400px;
   vertical-align: top;
   margin: 40px 40px;
   border-radius: 25px;
   padding: 20px;
+  color: #fff;
+  box-shadow: 2px 2px 2px 2px #999;
 }
 
 .resumen p {
-  background: yellow;
   display: inline-block;
   width: 40%;
+  vertical-align: middle;
+  /* margin-top: 25px; */
+  margin: 0;
+  color: #5e5e5e;
+  padding:0;
+  font-weight: lighter;
+  font-size: 18px;
 }
 
 .submit {
   display: block;
-  color: #fff;
-  background: #277eb8;
+  color: #277eb8;
+  background: #fff;
   width: 80%;
   margin: 15px auto;
   padding: 10px;
   border-radius: 10px;
   border: none;
-  /* font-weight: bold; */
   font-size: 20px;
+}
+
+.submit:hover{
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.submit:link {
+  border: 0;
+}
+.resumen h3 {
+  text-align: center;
+  font-size: 30px;
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.nombreAlojamiento {
+  margin-top: 0px;
+  display: block;
+}
+
+.nombreAlojamiento p {
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 25px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.resumen h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #000;
+  margin: 0;
+}
+
+.info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.resumen h4::before {
+  content: "";
 }

@@ -89,7 +89,7 @@
               }
             }
           }?>
-          <a href="detallesAlojamiento.php?Id=<?php echo $idAlojamiento?>">
+          <a href="detallesAlojamiento.php?Id=<?php echo $idAlojamiento?>&In=<?php echo $fechaLlegada ?>&Out=<?php echo $fechaSalida ?>">
             <section class="alojamiento">
             <img src="../images/alojamientos/<?php echo $row["Nombre"]; ?>/1.jpg" alt="">
             <article class="info">

@@ -8,7 +8,10 @@
     echo 'Usted no tiene autorización';
     die();
   }
+  date_default_timezone_set('America/Mexico_City');
   $id= $_GET['Id'];
+  $fechaSalida= $_GET['Out'];
+  $fechaLlegada= $_GET['In'];
   $consulta ="Select * from alojamientos where Id_Alojamiento = $id";
   $resultado = mysqli_query($conexion, $consulta);
   $alojamiento = mysqli_fetch_assoc($resultado);
@@ -17,6 +20,16 @@
   $dueño = "Select Nombre, Apellido from usuarios where Id_Usuario = '$alojamiento[Id_Usuario]'";
   $resultados = mysqli_query($conexion, $dueño);
   $anfitrion = mysqli_fetch_assoc($resultados);
+  $Llegada  = new DateTime($fechaLlegada);
+  $Salida = new DateTime($fechaSalida);
+  $intvl = $Llegada->diff($Salida);
+  $Noches =  $intvl->days;
+  $Total = $Noches*$alojamiento["Costo"];
+
+  // echo $intvl->y . " year, " . $intvl->m." months and ".$intvl->d." day";
+  // echo "\n";
+  // // Total amount of days
+  // echo $intvl->days . " days ";
 ?>
 
 <!DOCTYPE html>
@@ -77,16 +90,35 @@
           <form class="" action="index.html" method="post">
             <h3>¡Reservala ahora!</h3>
             <br>
+            <div class="nombreAlojamiento">
             <p><?php echo $alojamiento["Nombre"] ?></p>
+            </div>
             <br>
-            <p>Noches: </p>
-            <p>10</p>
-            <p>Fecha de llegada: </p>
-            <p>3 de junio</p>
-            <p>Fecha de Salida: </p>
-            <p>10 de junio</p>
+            <div class="info">
+              <h4>Ubicación:</h4>
+              <p><?php echo $alojamiento["Ubicación"] ?></p>
+            </div>
             <br>
-            <input type="submit" name="" value="Reservar" class="submit">
+            <div class="info">
+              <h4>Fecha de llegada: </h4>
+              <p><?php echo $fechaLlegada ?></p>
+            </div>
+            <br>
+            <div class="info">
+              <h4>Fecha de Salida: </h4>
+              <p><?php echo $fechaSalida ?></p>
+            </div>
+            <br>
+            <div class="info">
+              <h4>Costo por noche: </h4>
+              <p>$<?php echo $alojamiento["Costo"]; ?> / MXN</p>
+            </div>
+            <br>
+            <div class="info">
+              <h4>TOTAL: </h4>
+              <p>$<?php echo $Total ?> / MXN</p>
+            </div>
+            <input type="submit" name="" value="¡Reservar!" class="submit">
           </form>
         </div>
     </article>
