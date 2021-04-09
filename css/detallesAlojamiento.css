@@ -140,6 +140,7 @@ h4::before {
   width: 98%;
   max-width: 1500px;
   margin: auto;
+  margin-bottom: 100px;
   overflow: hidden;
   box-shadow: 0 0 0 4px #fff,
               0 15px 50px;
@@ -189,4 +190,59 @@ h4::before {
 
 .slider-btn:hover {
   background: #fff;
+}
+
+p {
+  text-align: justify;
+  width: 85%;
+  /* border-bottom: solid 1px #999; */
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.anfitrion p{
+  display: inline-block;
+}
+
+.informacion {
+  background: red;
+}
+
+.descripcion {
+  background: blue;
+  width: 60%;
+  display: inline-block;
+}
+
+.resumen {
+  background: green;
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  margin: 40px 40px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.resumen p {
+  background: yellow;
+  display: inline-block;
+  width: 40%;
+}
+
+.submit {
+  display: block;
+  color: #fff;
+  background: #277eb8;
+  width: 80%;
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  /* font-weight: bold; */
+  font-size: 20px;
 }

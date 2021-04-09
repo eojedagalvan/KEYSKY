@@ -14,6 +14,9 @@
   $alojamiento = mysqli_fetch_assoc($resultado);
   $checarfotos = "select * from imagen where Id_Alojamiento = '$id'";
   $resultado = mysqli_query($conexion, $checarfotos);
+  $dueño = "Select Nombre, Apellido from usuarios where Id_Usuario = '$alojamiento[Id_Usuario]'";
+  $resultados = mysqli_query($conexion, $dueño);
+  $anfitrion = mysqli_fetch_assoc($resultados);
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +64,32 @@
       <div class="slider-btn slider-btn-right" id="btn-right">></div>
       <div class="slider-btn slider-btn-left" id="btn-left"><</div>
       </article>
+      <article class="informacion">
+        <div class="descripcion">
+          <h2>Acerca de la <?php echo $alojamiento["Nombre"]?></h2>
+          <p><?php echo $alojamiento["Descripción"] ?></p>
+          <div class="anfitrion">
+          <h3>Anfitrión: </h3>
+            <p><?php echo $anfitrion["Nombre"]; echo " " ;echo $anfitrion["Apellido"]; ?></p>
+          </div>
+        </div>
+        <div class="resumen">
+          <form class="" action="index.html" method="post">
+            <h3>¡Reservala ahora!</h3>
+            <br>
+            <p><?php echo $alojamiento["Nombre"] ?></p>
+            <br>
+            <p>Noches: </p>
+            <p>10</p>
+            <p>Fecha de llegada: </p>
+            <p>3 de junio</p>
+            <p>Fecha de Salida: </p>
+            <p>10 de junio</p>
+            <br>
+            <input type="submit" name="" value="Reservar" class="submit">
+          </form>
+        </div>
+    </article>
     </section>
   </body>
   <script src="../js/slider.js"></script>
