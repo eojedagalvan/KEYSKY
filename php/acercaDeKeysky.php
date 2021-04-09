@@ -42,5 +42,28 @@
         </ul>
       </nav>
     </header>
+
+    <section class="inicio">
+      <img id="uno" src="../images/acercaDe/one.jpg" width="1059" height="603">
+      <h1 id="text" >KEYSKY</h1>
+    </section>
+
+    <section class="who">
+      <img id="dos" src="../images/acercaDe/two.jpg">
+      <h1>¿Quiénes somos?</h1>
+      <p id="somos">
+        Somos una compañía dedicada a la oferta de distintos alojamientos
+        en donde nuestros usuarios pueden publicar sus propiedades al igual
+        que rentar de los demás usuarios.
+        <br/> <br/> <br/>
+        En KEYSKY estamos comprometidos en brindar un servicio exclusivo
+        a nuestros usuarios para que puedan gozar de los inmuebles
+        publicados en nuestra plataforma.
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2021 KEYSKY, Inc. All rights reserved</p>
+    </footer>
   </body>
 </html>

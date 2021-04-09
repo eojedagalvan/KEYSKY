@@ -1,3 +1,5 @@
+/***************MENU********************/
+
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
@@ -106,4 +108,68 @@ ul {
 
 a {
   text-decoration: none;
+}
+/*********************¿QUIENES SOMOS?**********************/
+#uno {
+  width: 100%;
+  position: relative;
+}
+
+#text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  border: solid 3px #fff;
+}
+
+#text {
+  font-size: 50px;
+}
+
+.who {
+  position: relative;
+  margin-bottom: -4px;
+  margin-top: -3px;
+}
+
+#dos {
+  width: 50%;
+  position: relative;
+}
+
+.who h1 {
+  color: #277eb8;
+  float: right;
+  font-size: 50px;
+  padding-right: 200px;
+  padding-top: 25px;
+}
+
+#somos {
+  border: #277eb8 2px solid;
+  float: right;
+  font-size: 18px;
+  margin-right: 110px;
+  margin-top: -330px;
+  padding: 15px;
+  text-align: justify;
+  width: 530px;
+}
+
+/***************FOOTER********************/
+
+footer {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #277eb8;
+}
+
+footer p {
+  margin: 0;
+  padding: 50px;
 }
