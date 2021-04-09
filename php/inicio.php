@@ -9,6 +9,16 @@
     echo 'Usted no tiene autorización';
     die();
   }
+  $fechaActual = date('Y-m-d');
+  $obtenerSalidas = "Select Fecha_Salida from renta";
+  $consulta = mysqli_query($conexion, $obtenerSalidas);
+  while ($row = mysqli_fetch_assoc($consulta)) {
+    if ($row["Fecha_Salida"] < $fechaActual){
+      $fechaSalida = $row["Fecha_Salida"];
+      $borrarRenta = "delete from renta where Fecha_Salida = '$fechaSalida'";
+      $borrar = mysqli_query($conexion, $borrarRenta);
+    }
+  }
 ?>
 
 <!DOCTYPE html>
