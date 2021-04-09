@@ -17,7 +17,7 @@
   $alojamiento = mysqli_fetch_assoc($resultado);
   $checarfotos = "select * from imagen where Id_Alojamiento = '$id'";
   $resultado = mysqli_query($conexion, $checarfotos);
-  $dueño = "Select Nombre, Apellido from usuarios where Id_Usuario = '$alojamiento[Id_Usuario]'";
+  $dueño = "Select * from usuarios where Id_Usuario = '$alojamiento[Id_Usuario]'";
   $resultados = mysqli_query($conexion, $dueño);
   $anfitrion = mysqli_fetch_assoc($resultados);
   $Llegada  = new DateTime($fechaLlegada);
@@ -82,9 +82,23 @@
           <h2>Acerca de la <?php echo $alojamiento["Nombre"]?></h2>
           <p><?php echo $alojamiento["Descripción"] ?></p>
           <div class="anfitrion">
-          <h3>Anfitrión: </h3>
+            <div class="datos">
+            <h2>¿Tienes dudas?</h2>
+          <h2>Contacta al Anfitrión: </h2>
+          <h3>Nombre: </h3>
             <p><?php echo $anfitrion["Nombre"]; echo " " ;echo $anfitrion["Apellido"]; ?></p>
+            <br>
+            <h3>Correo: </h3>
+            <p><?php echo $anfitrion["Correo"] ?></p>
+            <br>
+            <h3>Tel: </h3>
+            <p><?php echo $anfitrion["Teléfono"] ?></p>
+            <br>
           </div>
+          <div class="imagen">
+            <img src="../images/KEYSKY 2.jpg" alt="">
+          </div>
+        </div>
         </div>
         <div class="resumen">
           <form class="" action="index.html" method="post">

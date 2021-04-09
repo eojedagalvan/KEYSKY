@@ -108,6 +108,48 @@ a {
   text-decoration: none;
 }
 
+@media (max-width:768px) {
+
+  header {
+    background-color: #277eb8;
+  }
+  header label {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    z-index: 1;
+    width: 60%;
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu img {
+    display: none;
+  }
+
+  .menu ul li a{
+    border-top: solid 2px #fff;
+    padding: 20px;
+  }
+
+  .menu ul li:last-child {
+    border-right: solid 2px #fff;
+  }
+
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+  .slider {
+    display: none;
+  }
+}
+
 #primeraSeccion {
   width: 95%;
   margin: 10px auto;
@@ -203,13 +245,47 @@ h3 {
   display: inline-block;
 }
 
+.anfitrion {
+  padding: 20px;
+  background: ##4668cc;
+  border-radius: 20px;
+  width: 800px;
+  position: relative;
+  border: solid 2px #999;
+  margin-top: 50px;
+}
+
+.anfitrion h2 {
+  margin: 10px 0px;
+}
+
 .anfitrion p{
+  width: auto;
   display: inline-block;
 }
 
+.datos {
+  display: inline-block;
+}
+
+.datos * {
+    padding: 0;
+    margin-bottom: 10px;
+}
+.imagen {
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .descripcion {
   width: 60%;
   display: inline-block;
+}
+
+.descripcion > p {
+  border-bottom: solid 1px #999;
 }
 
 .resumen {
