@@ -7,6 +7,10 @@ const btnRight = document.querySelector("#btn-right");
 
 slider.insertAdjacentElement('afterbegin', sliderSectionLast);
 
+var intervalo = setInterval(function () {
+  next();
+}, 10000);
+
 function next() {
   let sliderSectionFirst = document.querySelectorAll(".slider_section")[0];
   slider.style.marginLeft = "-200%";
@@ -20,6 +24,10 @@ function next() {
 
 btnRight.addEventListener('click', function () {
   next();
+  clearInterval(intervalo);
+  intervalo = setInterval(function () {
+    next();
+  }, 10000);
 });
 
 function Prev() {
@@ -36,8 +44,8 @@ function Prev() {
 
 btnLeft.addEventListener('click', function () {
   Prev();
+  clearInterval(intervalo);
+  intervalo = setInterval(function () {
+    next();
+  }, 10000);
 });
-
-setInterval(function () {
-  next();
-}, 10000);

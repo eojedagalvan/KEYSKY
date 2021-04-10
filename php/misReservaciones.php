@@ -59,7 +59,7 @@
               <img src="..\images\alojamientos\<?php  echo $nombreAlojamiento?>\1.jpg" alt="">
             </div>
             <h2><?php echo $alojamiento["Nombre"] ?></h2>
-            <button type="button" name="button">Detalles</button>
+          <a href="detallesReservacion.php?id=<?php echo $alojamiento["Id_Alojamiento"] ?>&in=<?php echo $hayRenta["Fecha_Entrada"] ?>&out= <?php echo $hayRenta["Fecha_Salida"] ?>"><button type="button" name="button">Detalles</button></a>  
           </div>
 
     <?php  }
