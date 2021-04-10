@@ -141,7 +141,7 @@ a {
   position: relative;
 }
 
-.who h1 {
+#tit1 {
   color: #277eb8;
   float: right;
   font-size: 50px;
@@ -158,6 +158,145 @@ a {
   padding: 15px;
   text-align: justify;
   width: 530px;
+}
+
+/*****************FRASE***********************/
+
+.frase {
+  background: #277eb8;
+  border: #fff 1px solid;
+  margin-top: -23px;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+}
+
+h2 {
+  border: #fff 2px solid;
+  color: #fff;
+  font-style: italic;
+  font-weight: lighter;
+  padding: 20px;
+  margin-left: 40px;
+  text-align: center;
+  width: 90%;
+}
+
+/*************FUNDACION*******************/
+
+.contactos {
+  position: relative;
+  margin-bottom: -4px;
+  text-align: right;
+}
+
+#tres {
+  width: 50%;
+  padding-left: 50%;
+  position: relative;
+}
+
+
+#fund {
+  color: #277eb8;
+  font-size: 50px;
+  float: left;
+  margin-top: -440px;
+  margin-left: 260px;
+}
+
+#nosotros {
+  border: #277eb8 2px solid;
+  float: left;
+  font-size: 18px;
+  margin-left: 100px;
+  margin-top: -340px;
+  padding: 15px;
+  text-align: justify;
+  width: 530px;
+}
+
+/*************SEPARADOR******************/
+.divisor {
+  position: relative;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  text-align: left;
+}
+
+#cuatro {
+  width: 100%;
+  position: relative;
+  background-color: pink;
+  margin-top: -6px;
+}
+
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-80%);
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  border: solid 3px #fff;
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/******************FINAL**********************/
+
+#tfinal {
+  border-bottom: #277eb8 4px solid;
+  color: #277eb8;
+  font-size: 50px;
+  margin-left: 15%;
+  text-align: center;
+  width: 70%;
+}
+
+#con {
+  border: #277eb8 1px solid;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 20%;
+  text-align: center;
+  width: 10%;
+  padding: 5px;
+}
+
+#correo1 {
+  font-size: 18px;
+  margin-left: -400px;
+  text-align: center;
+}
+
+#correo2 {
+  font-size: 18px;
+  margin-left: -430px;
+  text-align: center;
+}
+
+#correo3 {
+  font-size: 18px;
+  margin-left: -590px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/***************NEGRITAS***************/
+
+span {
+  font-weight: bolder;
+  font-size: 18px;
+  font-style: italic;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: oblique;
 }
 
 /***************FOOTER********************/

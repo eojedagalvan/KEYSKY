@@ -50,16 +50,55 @@
 
     <section class="who">
       <img id="dos" src="../images/acercaDe/two.jpg">
-      <h1>¿Quiénes somos?</h1>
+      <h1 id="tit1">¿Quiénes somos?</h1>
       <p id="somos">
         Somos una compañía dedicada a la oferta de distintos alojamientos
         en donde nuestros usuarios pueden publicar sus propiedades al igual
         que rentar de los demás usuarios.
         <br/> <br/> <br/>
-        En KEYSKY estamos comprometidos en brindar un servicio exclusivo
+        En <span id="name">KEYSKY </span>estamos comprometidos en brindar un servicio exclusivo
         a nuestros usuarios para que puedan gozar de los inmuebles
         publicados en nuestra plataforma.
       </p>
+    </section>
+
+    <section class="frase">
+      <h2>« Invertir en viajar, es invertir en uno mismo » <br/><br/>
+      - Matthew Karsten</h2>
+    </section>
+
+    <section class="contactos">
+      <img id="tres" src="../images/acercaDe/who.jpg">
+      <h1 id="fund">Fundación</h1>
+      <p id="nosotros">
+        <span id="name">KEYSKY </span>surge de la idea de <span>Eduardo Ojeda</span>
+        y <span>Karen Núñez</span>,
+        dos estudiantes de la carrera de Ingeniería de Software de
+        la Universidad Autónoma de Guadalajara,
+        por desarrollar una plataforma en la cual los usuarios
+        pudieran ofrecer distintos
+        alojamientos para rentar o publicar uno propio.
+        <br/><br/><br/>
+        El desarrollo de proyecto comenzó en el mes de Enero del año 2021 y culmina en
+        Abril del mismo año, dejando en funcionamiento la plataforma para futuros usuarios.
+      </p>
+    </section>
+
+    <section class="divisor">
+      <img id="cuatro" src="../images/acercaDe/three.jpg" width="1326" height="700">
+      <p class="texto">Collect moments, not things.</p>
+    </section>
+
+    <section class="final">
+      <h1 id="tfinal">Contáctanos</h1>
+      <ul>
+        <li id="con">Eduardo Ojeda</li>
+        <p id="correo1">Correo: ojedaeduardo2001@gmail.com</p>
+        <li id="con">Karen Núñez</li>
+        <p id="correo2">Correo: karennunez580@gmail.com</p>
+        <li id="con">KEYSKY</li>
+        <p id="correo3"><a href="https://github.com/eojedagalvan/KEYSKY" target="_blank">GitHub: KEYSKY</a></p>
+      </ul>
     </section>
 
     <footer>
