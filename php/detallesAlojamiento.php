@@ -36,7 +36,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title><?php echo $nombre ?></title>
+    <title><?php echo $alojamiento["Nombre"] ?></title>
     <link rel="shortcut icon" href="../images/KEYSKY.jpg" />
     <link rel="stylesheet" href="../css/detallesAlojamiento.css">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>

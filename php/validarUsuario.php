@@ -23,6 +23,7 @@ if($filas > 0) {
   session_start();
   $_SESSION['Nombre'] = $nombre;
   $_SESSION['Apellido'] = $apellido;
+  $_SESSION['Correo'] = $correo;
 }
 else {
   http_response_code(401);

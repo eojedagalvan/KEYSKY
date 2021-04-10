@@ -204,6 +204,7 @@ input {
   width: 50%;
   border: none;
   border-radius: 10px;
+  outline: none;
 }
 
 .hide {
