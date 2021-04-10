@@ -169,7 +169,9 @@ ul {
 
 .alojamiento img {
   height: 100%;
+  width: 450px;
   display: inline-block;
+  object-fit: cover;
 }
 
 .info {
