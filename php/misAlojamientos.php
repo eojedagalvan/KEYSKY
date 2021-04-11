@@ -3,12 +3,21 @@
   session_start();
   error_reporting(0);
   $varsesion = $_SESSION['Nombre'];
-  $lugares = "select DISTINCT Ubicación from alojamientos";
 
   if($varsesion == null || $varsesion = ''){
     echo 'Usted no tiene autorización';
     die();
   }
+
+  $idUsuario = "Select Id_Usuario from usuarios where Correo = '$_SESSION[Correo]'";
+  $consultaUsuario = mysqli_query($conexion, $idUsuario);
+  $id = mysqli_fetch_assoc($consultaUsuario);
+  $checarOwner = "Select * from alojamientos where Id_Usuario = '$id[Id_Usuario]'";
+  $consultaOwner = mysqli_query($conexion, $checarOwner);
+
+  // $owner = mysqli_fetch_assoc($consultaOwner);
+  // $insertOwner = "INSERT into duenos (Id_Usuario) values ('$owner[Id_Usuario]')";
+
 ?>
 
 <!DOCTYPE html>
@@ -42,5 +51,30 @@
         </ul>
       </nav>
     </header>
+
+    <section id="Alojamientos">
+      <?php if (mysqli_num_rows($consultaOwner) > 0) {
+        while ($row = mysqli_fetch_assoc($consultaOwner)) {?>
+          <h1>TUS ALOJAMIENTOS</h1>
+          <section class="alojamiento">
+          <img src="../images/alojamientos/<?php echo $row["Nombre"]; ?>/1.jpg" alt="">
+          <article class="info">
+            <h5><?php echo $row["Ubicación"] ?></h5>
+            <h2><?php echo $row["Nombre"] ?></h2>
+            <p><?php echo $row["Descripción"] ?></p>
+            <h3>$<?php echo $row["Costo"] ?> MXN / noche</h3>
+          </article>
+        </section>
+        <?php }
+      }
+      else { ?>
+        <div class="noAlojamiento">
+            <h1 id="tit">No tienes ninguna propiedad registrada</h1>
+            <h3>¡Comparte tu propiedad con nuestros usuarios!</h3>
+            <a href="inicio.php"><button type="button" name="button"> + Publicar una propiedad</button></a>
+        </div>
+    <?php }?>
+
+    </section>
   </body>
 </html>
