@@ -104,3 +104,29 @@ input[type = "submit"]
 .hide {
   display: none;
 }
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #277eb8;
+  display: block;
+  transform: translateX(10%) translateY(-2600%);
+}
+
+#cuenta {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 20px;
+  color: darkgrey;
+  display: block;
+  transform: translateX(30%) translateY(-80%);
+}
+
+a:hover {
+  color: darkgrey;
+}
+
+#cuenta:hover {
+  color: #000;
+}
