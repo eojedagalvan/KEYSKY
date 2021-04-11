@@ -1,5 +1,29 @@
 const loginForm = document.querySelector("#uno");
 const loginError = document.querySelector(".login-error");
+const validarTelefono = document.querySelector("#telefono");
+const validarNombre = document.querySelector("#nom");
+const validarApellido = document.querySelector("#ape");
+
+window.addEventListener("load", function() {
+validarTelefono.addEventListener("keypress", soloNumeros, false);
+validarNombre.addEventListener("keypress", soloLetras, false);
+validarApellido.addEventListener("keypress", soloLetras, false);
+});
+
+//Solo permite introducir numeros.
+function soloNumeros(e){
+var key = window.event ? e.which : e.keyCode;
+if (key < 48 || key > 57) {
+  e.preventDefault();
+}
+}
+
+function soloLetras(e){
+var key = window.event ? e.which : e.keyCode;
+if (!(key < 48 || key > 57)) {
+  e.preventDefault();
+}
+}
 
 loginForm.addEventListener("submit", function (evento) {
   evento.preventDefault();
@@ -9,30 +33,6 @@ loginForm.addEventListener("submit", function (evento) {
   const correo = document.querySelector("#correo").value;
   const contra = document.querySelector("#contra").value;
   const contra2 = document.querySelector("#contra2").value;
-  const validarTelefono = document.querySelector("#telefono");
-  const validarNombre = document.querySelector("#nom");
-  const validarApellido = document.querySelector("#ape");
-
-  window.addEventListener("load", function() {
-  validarTelefono.addEventListener("keypress", soloNumeros, false);
-  validarNombre.addEventListener("keypress", soloLetras, false);
-  validarApellido.addEventListener("keypress", soloLetras, false);
-});
-
-//Solo permite introducir numeros.
-function soloNumeros(e){
-  var key = window.event ? e.which : e.keyCode;
-  if (key < 48 || key > 57) {
-    e.preventDefault();
-  }
-}
-
-function soloLetras(e){
-  var key = window.event ? e.which : e.keyCode;
-  if (!(key < 48 || key > 57)) {
-    e.preventDefault();
-  }
-}
 
   if (!validarUsuarioExistente(nombre, apellido, telefono, correo, contra, contra2)) return;
 
