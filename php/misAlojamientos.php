@@ -17,7 +17,6 @@
 
   // $owner = mysqli_fetch_assoc($consultaOwner);
   // $insertOwner = "INSERT into duenos (Id_Usuario) values ('$owner[Id_Usuario]')";
-
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +55,7 @@
       <?php if (mysqli_num_rows($consultaOwner) > 0) {
         while ($row = mysqli_fetch_assoc($consultaOwner)) {?>
           <h1>TUS ALOJAMIENTOS</h1>
-          <section class="alojamiento">
+        <section class="alojamiento">
           <img src="../images/alojamientos/<?php echo $row["Nombre"]; ?>/1.jpg" alt="">
           <article class="info">
             <h5><?php echo $row["Ubicación"] ?></h5>
@@ -65,13 +64,17 @@
             <h3>$<?php echo $row["Costo"] ?> MXN / noche</h3>
           </article>
         </section>
+
+        <section id="boton">
+          <a href="nuevoAlojamiento.php"><button type="button" name="button" id="nueva"> + Publicar nueva propiedad</button></a>
+        </section>
         <?php }
       }
       else { ?>
         <div class="noAlojamiento">
             <h1 id="tit">No tienes ninguna propiedad registrada</h1>
             <h3>¡Comparte tu propiedad con nuestros usuarios!</h3>
-            <a href="inicio.php"><button type="button" name="button"> + Publicar una propiedad</button></a>
+            <a href="nuevoAlojamiento.php"><button type="button" name="button" id="nueva"> + Publicar nueva propiedad</button></a>
         </div>
     <?php }?>
 

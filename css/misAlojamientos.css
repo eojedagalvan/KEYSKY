@@ -108,6 +108,7 @@ a {
   text-decoration: none;
 }
 
+
 #Alojamientos {
   width: 95%;
   margin: 30px auto;
@@ -181,8 +182,8 @@ a {
   text-align: center;
 }
 
-.noAlojamiento button {
-  padding: 10px;
+#nueva {
+  padding: 15px;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -191,6 +192,11 @@ a {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+}
+
+#boton {
+  transform: translateX(45%);
+  padding-top: 20px;
 }
 
 .noAlojamiento #tit {
