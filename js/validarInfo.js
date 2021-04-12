@@ -6,7 +6,7 @@ const error = document.querySelector('.error');
 const tel = document.getElementById('tel');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
-const cancelar = document.getElementById('cancelar')
+const cancelar = document.getElementById('cancelar');
 
 window.addEventListener("load", function() {
   tel.addEventListener("keypress", soloNumeros, false);
