@@ -3,7 +3,6 @@
   session_start();
   error_reporting(0);
   $varsesion = $_SESSION['Nombre'];
-  $lugares = "select DISTINCT Ubicación from alojamientos";
 
   if($varsesion == null || $varsesion = ''){
     echo 'Usted no tiene autorización';
@@ -84,10 +83,10 @@
       </p>
     </section>
 
-    <section class="divisor">
+    <!-- <section class="divisor">
       <img id="cuatro" src="../images/acercaDe/three.jpg" width="1326" height="700">
       <p class="texto">Collect moments, not things.</p>
-    </section>
+    </section> -->
 
     <section class="final">
       <h1 id="tfinal">Contáctanos</h1>
