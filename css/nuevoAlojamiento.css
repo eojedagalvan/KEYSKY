@@ -1,0 +1,293 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px 20px 20px 10px;
+  border-right: solid 2px #fff;
+  font-size: 40px;
+  color: #fff;
+}
+
+header label:hover {
+  cursor: pointer;
+  background: rgb(0,0,0,0.3);
+}
+
+.menu img {
+  height: 50px;
+  margin: 4px 0 5px 10px;
+  background: #fff;
+  padding: 0px 10px;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.menu ul {
+  background: red;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: #277eb8;
+}
+
+.menu li {
+  border-right: solid 2px #fff;
+  position: relative;
+}
+
+.menu ul li:last-child {
+  border-right: 0;
+}
+.menu ul li a {
+  display: block;
+  padding: 20px 20px;
+  color: #fff;
+}
+
+.menu li:hover {
+  background: rgb(0,0,0,0.3);
+}
+
+.drop ul {
+  z-index: 1;
+  position: absolute;
+  display: none;
+  background: none;
+}
+
+.drop ul li {
+  border-right: 0;
+}
+
+.drop ul li a{
+  border-bottom: solid 2px #277eb8;
+  background: #e0d4d4;
+  color: #000;
+}
+.drop ul li a:hover{
+  background-color: #a2a0a2;
+  color: #fff;
+}
+
+.drop ul li:last-child a {
+  border-bottom: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.drop:hover ul{
+  display: block;
+}
+.menu ul li {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*****SECCION 1********/
+
+.slider {
+  width: 100%;
+  height: 687px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider ul {
+  padding: 0;
+  display: inline-flex;
+  width: 400%;
+  margin: 0;
+
+  animation: cambio 20s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes cambio {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+.slider li {
+  width: 100%;
+  display: inline-flex;
+}
+
+.slider img {
+  width: 100%;
+  transform: translateY(-8%);
+}
+
+.fondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: rgb(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+}
+
+/************FORMULARIO****************/
+
+.LOGO
+{
+  width: 150px;
+  height: auto;
+  position: absolute;
+  border-radius: 20px;
+  top: 0px;
+  left: 180px;
+}
+
+h1
+{
+  background: #277eb8;
+  color:#fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  font-family: monospace;
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+
+.formu
+{
+  width: 520px;
+  background: #fff;
+  color: #277eb8;
+  top: 15%;
+  left: 32%;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px #999;
+}
+
+.formu form
+{
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+label
+{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+  font-size: 15px;
+}
+
+input
+{
+  border: none;
+  border-bottom: 1px solid #277eb8;
+  background: transparent;
+  outline: none;
+  height: 20px;
+  color: #000;
+  font-size: 15px;
+  width: 85%;
+  margin-bottom: 20px;
+}
+
+#costo
+{
+  width: 65%;
+}
+
+
+textarea {
+  border: 1px solid #277eb8;
+  border-radius: 10px;
+  background: transparent;
+  height: 40px;
+  color: #000;
+  font-size: 15px;
+  width: 85%;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+textarea::placeholder {
+  padding-left: 8px;
+}
+
+/***BOTON Y ERRORES*****/
+input[type = "submit"]
+{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #277eb8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 20px
+}
+
+.login-error {
+  color: #da3434;
+  margin: -10px 0 20px 0;
+}
+
+.login-error::before {
+  content: "*";
+}
+
+.hide {
+  display: none;
+}
+
+/*************FOOTER*************/
+footer {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #277eb8;
+}
+
+footer p {
+  margin: 0;
+  padding: 15px;
+  margin-left: 30px;
+  font-size: 12px;
+}
