@@ -180,6 +180,8 @@ a {
   width: 105%;
   height: 900px;
   text-align: center;
+  width: auto;
+  height: auto;
 }
 
 #nueva {

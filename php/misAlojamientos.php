@@ -52,9 +52,9 @@
     </header>
 
     <section id="Alojamientos">
-      <?php if (mysqli_num_rows($consultaOwner) > 0) {
-        while ($row = mysqli_fetch_assoc($consultaOwner)) {?>
-          <h1>TUS ALOJAMIENTOS</h1>
+      <?php if (mysqli_num_rows($consultaOwner) > 0) {?>
+        <h1>TUS ALOJAMIENTOS</h1>
+        <?php while ($row = mysqli_fetch_assoc($consultaOwner)) {?>
         <section class="alojamiento">
           <img src="../images/alojamientos/<?php echo $row["Nombre"]; ?>/1.jpg" alt="">
           <article class="info">
@@ -64,12 +64,12 @@
             <h3>$<?php echo $row["Costo"] ?> MXN / noche</h3>
           </article>
         </section>
+      <?php } ?>
 
         <section id="boton">
           <a href="nuevoAlojamiento.php"><button type="button" name="button" id="nueva"> + Publicar nueva propiedad</button></a>
         </section>
-        <?php }
-      }
+      <?php }
       else { ?>
         <div class="noAlojamiento">
             <h1 id="tit">No tienes ninguna propiedad registrada</h1>
