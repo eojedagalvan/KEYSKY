@@ -112,7 +112,8 @@ a {
 
 .slider {
   width: 100%;
-  height: 687px;
+  /* height: 687px; */
+  height: 815px;
   overflow: hidden;
   position: relative;
 }
@@ -164,61 +165,68 @@ a {
 
 /************FORMULARIO****************/
 
-.LOGO
-{
-  width: 150px;
-  height: auto;
-  position: absolute;
-  border-radius: 20px;
-  top: 0px;
-  left: 180px;
-}
-
 h1
 {
-  background: #277eb8;
-  color:#fff;
-  margin: 0;
-  padding: 0;
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 4px;
+  margin-bottom: 2px;
   text-align: center;
-  position: relative;
-  font-size: 20px;
-  font-family: monospace;
-  margin-top: 90px;
-  margin-bottom: 20px;
+  color: #fff;
 }
 
-.formu
-{
-  width: 520px;
-  background: #fff;
-  color: #277eb8;
-  top: 15%;
-  left: 32%;
-  position: absolute;
+.formu {
+  /* width: 520px;*/
+  /*color: #fff;
+  background: #277eb8;
   box-sizing: border-box;
   border-radius: 30px;
-  box-shadow: 2px 2px 2px #999;
+  box-shadow: 2px 2px 2px #999; */
+  /* display: inline-block; */
+  /* margin-left: 20px; */
+  position: absolute;
+  width: 40%;
+  top: 15%;
+  left: 3%;
+  border: solid 1px #999;
+  padding: 20px;
+  background: #277eb8;
+  border-radius: 20px;
+  margin-right: 0px;
+}
+
+.fotos {
+  left: 120%;
+  width: 90%;
+  height: 30%;
+}
+
+#fot {
+  margin-left: 26px;
+  margin-top: 18px;
 }
 
 .formu form
 {
-  padding-left: 60px;
+  padding-left: 55px;
   padding-top: 20px;
 }
 
-label
-{
-  margin: 0;
+label {
+  /* margin: 0;
   padding: 0;
   font-weight: bold;
   display: block;
-  font-size: 15px;
+  font-size: 15px; */
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
-input
-{
-  border: none;
+input {
+/* border: none;
   border-bottom: 1px solid #277eb8;
   background: transparent;
   outline: none;
@@ -226,34 +234,47 @@ input
   color: #000;
   font-size: 15px;
   width: 85%;
-  margin-bottom: 20px;
+  margin-bottom: 20px; */
+  width: 85%;
+  padding: 14px;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
 }
 
 #costo
 {
-  width: 65%;
+  width: 62%;
+  margin-bottom: 2px;
 }
 
-
 textarea {
-  border: 1px solid #277eb8;
+  /* border: 1px solid #277eb8;
   border-radius: 10px;
   background: transparent;
   height: 40px;
   color: #000;
   font-size: 15px;
-  width: 85%;
   margin-top: 8px;
-  margin-bottom: 20px;
-}
-
-textarea::placeholder {
-  padding-left: 8px;
+  margin-bottom: 20px; */
+  font-family: 'Ubuntu', sans-serif;
+  width: 86%;
+  text-align: justify;
+  font-size: 15px;
+  font-weight: lighter;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px 10px 0px 10px;
+  resize: none;
+  margin-bottom: -40px;
 }
 
 /***BOTON Y ERRORES*****/
-input[type = "submit"]
-{
+
+/* #boton {
   border: none;
   outline: none;
   height: 40px;
@@ -262,6 +283,31 @@ input[type = "submit"]
   font-weight: bold;
   font-size: 18px;
   border-radius: 20px
+} */
+
+#publicar {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bolder;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  width: 220px;
+  background: #dfe7e8;
+  outline: none;
+}
+
+.boton {
+  width: 100%;
+  text-align: center;
+  margin-left: 133%;
+  transform: translateY(-548%);
+  position: relative;
+}
+
+#publicar:hover{
+  background: #90c86f;
 }
 
 .login-error {

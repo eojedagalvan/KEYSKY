@@ -54,9 +54,8 @@
     </div>
 
     <div class="formu">
-      <img  class="LOGO" src="../IMAGES/KEYSKY 4.jpg" alt="Logo">
       <h1>NUEVO ALOJAMIENTO</h1>
-      <form class="formulario"  method="post">
+      <form class="formulario" id="uno" method="post">
         <label>Nombre</label>
         <input type="text" id="nom" name="nombre" placeholder="Ingresa el nombre de tu propiedad" required>
         <br/>
@@ -67,17 +66,33 @@
         <label> <input type="number" id="costo" name="costo" placeholder="Ingresa el costo por noche" required> MXN / noche</label>
         <br/>
         <label>Descripción</label>
-        <textarea name="descripcion" rows="9" cols="65" placeholder="Inserta breve descripción de tu propiedad"><?php echo $alojamiento["Descripción"] ?></textarea>
+        <textarea name="descripcion" id="descripcion" rows="9" cols="65" placeholder="Inserta breve descripción de tu propiedad" required></textarea>
         <br/>
+
+        <div class="formu fotos">
+          <h1>Fotos de tu alojamiento</h1>
+            <input id="fot" type="file" name="archivo" multiple="" required>
+        </div>
 
         <p class="login-error hide"></p>
 
-        <input type="submit" id="boton" value="Publicar">
+        <div class="boton">
+          <button type="submit" class="publicar" id="publicar">Publicar</button>
+        </div>
       </form>
     </div>
+
+    <!-- <div class="formu fotos">
+      <h1>Fotos de tu alojamiento</h1>
+      <form class="formulario" method="post">
+        <input type="file" name="archivo" multiple="">
+      </form>
+    </div> -->
 
     <footer>
       <p>© 2021 KEYSKY, Inc. All rights reserved</p>
     </footer>
   </body>
+  <script src="../js/nuevoAlojamiento.js"></script>
+  <script src="../js/axios.min.js"></script>
 </html>
