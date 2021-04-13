@@ -145,12 +145,32 @@ a {
   object-fit: cover;
 }
 
+#disponibilidad {
+  position: absolute;
+  display: block;
+  /* right: 10px; */
+  width: 100%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.disponible {
+  color:green;
+}
+
+.rentada {
+  color: red;
+}
+
 .info {
   display: inline-block;
   width: 65%;
   vertical-align: top;
   padding: 0px 20px;
   height: 100%;
+  position: relative;
 }
 
 .info p {

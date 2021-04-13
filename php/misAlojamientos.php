@@ -9,14 +9,25 @@
     die();
   }
 
+  $fechaActual = date('Y-m-d');
   $idUsuario = "Select Id_Usuario from usuarios where Correo = '$_SESSION[Correo]'";
   $consultaUsuario = mysqli_query($conexion, $idUsuario);
   $id = mysqli_fetch_assoc($consultaUsuario);
   $checarOwner = "Select * from alojamientos where Id_Usuario = '$id[Id_Usuario]'";
   $consultaOwner = mysqli_query($conexion, $checarOwner);
 
-  // $owner = mysqli_fetch_assoc($consultaOwner);
-  // $insertOwner = "INSERT into duenos (Id_Usuario) values ('$owner[Id_Usuario]')";
+  function check_in_range($fecha_inicio, $fecha_fin, $fecha){
+
+     $fecha_inicio = strtotime($fecha_inicio);
+     $fecha_fin = strtotime($fecha_fin);
+     $fecha = strtotime($fecha);
+
+     if(($fecha >= $fecha_inicio) && ($fecha <= $fecha_fin)) {
+         return true;
+     } else {
+         return false;
+     }
+ }
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +74,25 @@
             <h2><?php echo $row["Nombre"] ?></h2>
             <p><?php echo $row["Descripción"] ?></p>
             <h3>$<?php echo $row["Costo"] ?> MXN / noche</h3>
+            <?php
+              $consulta = "select * from renta where Id_Alojamiento = '$row[Id_Alojamiento]'";
+              $resultado = mysqli_query($conexion, $consulta);
+              $filas = mysqli_num_rows($resultado);
+
+              if ($filas > 0){
+                while ($checarDisp = mysqli_fetch_assoc($resultado)){
+                  if(check_in_range($checarDisp["Fecha_Entrada"], $checarDisp["Fecha_Salida"], $fechaActual)){ ?>
+                    <p id="disponibilidad" class="rentada">Rentada</p>
+                  </article>
+                </section>
+                     <?php continue 2;
+                   }
+                } ?>
+                <p id="disponibilidad" class="disponible">Disponible</p>
+
+            <?php  } else { ?>
+                <p id="disponibilidad" class="disponible">Disponible</p>
+            <?php } ?>
           </article>
         </section>
         </a>
