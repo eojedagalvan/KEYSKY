@@ -71,13 +71,12 @@
 
         <div class="formu fotos">
           <h1>Fotos de tu alojamiento</h1>
-            <input id="fot" type="file" name="archivo" multiple="" required>
-        </div>
-
-        <p class="login-error hide"></p>
-
-        <div class="boton">
-          <button type="submit" class="publicar" id="publicar">Publicar</button>
+          <label for="fot" class="archivos" id="label">Elegir archivos</label>
+            <input id="fot" type="file" name="archivo" multiple="" required accept=" .jpg, .png, .jpeg">
+            <p class="login-error">Debes subir 6 imágenes</p>
+            <div class="boton">
+              <button type="submit" class="publicar" id="publicar">Publicar</button>
+            </div>
         </div>
       </form>
     </div>

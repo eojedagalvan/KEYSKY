@@ -193,17 +193,35 @@ h1
   background: #277eb8;
   border-radius: 20px;
   margin-right: 0px;
+  height: 80%;
 }
 
 .fotos {
   left: 120%;
   width: 90%;
-  height: 30%;
+  height: 35%;
 }
 
 #fot {
-  margin-left: 26px;
-  margin-top: 18px;
+  /* margin-left: 26px;
+  margin-top: 18px; */
+  display: none;
+}
+
+.archivos {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  margin: 20px auto 10px auto;
+  font-weight:lighter;
+  cursor: pointer;
+}
+
+.archivos:hover {
+  background: rgba(255, 247, 247, 0.8);
 }
 
 .formu form
@@ -270,6 +288,7 @@ textarea {
   padding: 10px 10px 0px 10px;
   resize: none;
   margin-bottom: -40px;
+  outline: none;
 }
 
 /***BOTON Y ERRORES*****/
@@ -288,7 +307,8 @@ textarea {
 #publicar {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bolder;
-  margin: 10px auto;
+  margin: 20px auto -10px auto;
+  margin-bottom: 0px;
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -296,14 +316,15 @@ textarea {
   width: 220px;
   background: #dfe7e8;
   outline: none;
+  display: block;
 }
 
 .boton {
   width: 100%;
   text-align: center;
-  margin-left: 133%;
-  transform: translateY(-548%);
-  position: relative;
+  /* margin-left: 133%; */
+  /* transform: translateY(-548%); */
+  /* position: relative; */
 }
 
 #publicar:hover{
@@ -311,8 +332,11 @@ textarea {
 }
 
 .login-error {
-  color: #da3434;
-  margin: -10px 0 20px 0;
+  color: #fff;
+  margin: 0px auto 10px auto;
+  border-radius: 10px;
+  padding: 8px;
+  width: 80%;
 }
 
 .login-error::before {

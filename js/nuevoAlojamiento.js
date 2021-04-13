@@ -25,7 +25,6 @@ if (!(key < 48 || key > 57)) {
   e.preventDefault();
 }
 }
-
 loginForm.addEventListener("submit", function (evento) {
   evento.preventDefault();
   const nombre = document.querySelector("#nom").value;
@@ -76,16 +75,20 @@ function validarAlojamientoExistente(nombre, ubicacion, costo, descripcion, foto
     loginError.classList.remove("hide");
     loginError.innerText = "La descripción es demasiado larga";
     return false;
-  } else if (fotos.length > 6 ) {
+  } else if (fotos.length != 6 ) {
     loginError.classList.remove("hide");
-    loginError.innerText = "No se permiten más de 6 archivos";
+    loginError.innerText = "Es necesario subir 6 imágenes";
     return false;
-  } else if (fotos.length <= 6 ) {
+  } else if (fotos.length == 6 ) {
       for (var i = 0; i < fotos.length; i++) {
         if (fotos[i].type != "image/png" && fotos[i].type != "image/jpg" && fotos[i].type != "image/jpeg") {
           loginError.classList.remove("hide");
           loginError.innerText = "El tipo de archivo no está permitido";
           return false;
+        } else {
+          loginError.classList.remove("hide");
+          loginError.innerText = "Imágenes cargadas correctamente";
+          return true;
         }
       }
   }
