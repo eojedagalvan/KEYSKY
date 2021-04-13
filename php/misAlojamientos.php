@@ -55,6 +55,7 @@
       <?php if (mysqli_num_rows($consultaOwner) > 0) {?>
         <h1>TUS ALOJAMIENTOS</h1>
         <?php while ($row = mysqli_fetch_assoc($consultaOwner)) {?>
+          <a href="detallesAlojamientoDueño.php?Id=<?php echo $row["Id_Alojamiento"] ?>">
         <section class="alojamiento">
           <img src="../images/alojamientos/<?php echo $row["Nombre"]; ?>/1.jpg" alt="">
           <article class="info">
@@ -64,6 +65,7 @@
             <h3>$<?php echo $row["Costo"] ?> MXN / noche</h3>
           </article>
         </section>
+        </a>
       <?php } ?>
 
         <section id="boton">

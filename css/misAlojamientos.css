@@ -134,6 +134,10 @@ a {
   margin-bottom: 15px;
 }
 
+.alojamiento:hover {
+  box-shadow: 5px 5px 5px 5px #999;
+}
+
 .alojamiento img {
   height: 100%;
   width: 450px;
@@ -211,4 +215,9 @@ a {
 .noAlojamiento h3 {
   font-size: 20px;
   color: #8b8c8f;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
