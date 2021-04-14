@@ -101,7 +101,7 @@
         </div>
         </div>
         <div class="resumen">
-          <form class="" action="index.html" method="post">
+          <form class="" action="pagarRenta.php" method="post">
             <h3>¡Reservala ahora!</h3>
             <br>
             <div class="nombreAlojamiento">

@@ -24,7 +24,7 @@
   $resultado = mysqli_query($conexion, $insertar);
 
   //Insertar en tabla dueños
-  $consulta = "SELECT Id_Usuario from duenos where Id_Usuario = '$id'";
+  $consulta = "SELECT Id_Usuario from duenos where Id_Usuario = '$id[Id_Usuario]'";
   $resultadoId = mysqli_query($conexion, $consulta);
   $filas = mysqli_num_rows($resultadoId);
   if($filas == 0) {
