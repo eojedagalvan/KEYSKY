@@ -55,7 +55,7 @@
 
     <div class="formu">
       <h1>NUEVO ALOJAMIENTO</h1>
-      <form class="formulario" id="uno" method="post">
+      <form class="formulario" id="uno" method="post" enctype="multipart/form-data">
         <label>Nombre</label>
         <input type="text" id="nom" name="nombre" placeholder="Ingresa el nombre de tu propiedad" required>
         <br/>
