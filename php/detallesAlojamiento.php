@@ -101,7 +101,7 @@
         </div>
         </div>
         <div class="resumen">
-          <form class="" action="pagarRenta.php" method="post">
+          <form class="" method="post">
             <h3>¡Reservala ahora!</h3>
             <br>
             <div class="nombreAlojamiento">
@@ -132,7 +132,7 @@
               <h4>TOTAL: </h4>
               <p>$<?php echo $Total ?> / MXN</p>
             </div>
-            <input type="submit" name="" value="¡Reservar!" class="submit">
+            <a href="pagarRenta.php?id=<?php echo $alojamiento["Id_Alojamiento"] ?>&llegada= <?php echo $fechaLlegada ?>&salida= <?php echo $fechaSalida ?>"><button type="button" name="button" class="submit">¡Reservar!</button></a>
           </form>
         </div>
     </article>

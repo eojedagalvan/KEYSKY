@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  background: url("../images/fondo.jpg");
+  background-size: cover;
 }
 
 header {
@@ -160,8 +162,86 @@ a {
 
 #primeraSeccion h1 {
   font-size: 30px;
+  color: #fff;
 }
 
 .formulario {
   width: 100%;
+  /* background: red; */
+  text-align: center;
+}
+
+.seccion {
+  background: #277eb8;
+  width: 40%;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 10px;
+  vertical-align: top;
+  color: #fff;
+  text-align: left;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+form .datosPersonales {
+  /* background: blue; */
+  width: 70%;
+  margin: auto;
+  padding-left: 20px;
+}
+
+form .tarjeta {
+  /* background: green; */
+  margin: auto;
+  padding-left: 20px;
+  margin-left: 40px;
+}
+
+.seccion input {
+  width: 90%;
+  padding: 10px;
+  border: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  outline: none;
+  background: #fff;
+}
+
+.seccion label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.submit {
+  margin-top: 100px;
+}
+
+.submit button {
+  width: 20%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  margin-bottom: 20px;
+  color: #fff;
+  background: #277eb8;
+  font-size: 20px;
+}
+
+.submit button:hover {
+  background: green;
+}
+
+.mensaje {
+  margin-top: 50px;
+  text-align: center;
+  background: #a8a6a2;
+  width: 102%;
+  margin-left: 0px;
+}
+.mensaje h1 {
+  font-size: 100px;
+  padding: 20px;
 }

@@ -9,6 +9,9 @@
     die();
   }
 
+$idAlojamiento = $_GET['id'];
+$fechaLlegada = $_GET['llegada'];
+$fechaSalida = $_GET['salida'];
   ?>
 
   <!DOCTYPE html>
@@ -45,13 +48,41 @@
       <section id="primeraSeccion">
         <h1>Completa tus datos</h1>
         <div class="formulario">
-          <form class="" action="index.html" method="post">
-            <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" value="">
-            <label for="apelllido">Apellido: </label>
-            <input type="text" name="apellido" value="">
-            
+          <form class="" action="crearReservacion.php" method="post">
+            <input type="text" name="id" value="<?php echo $idAlojamiento ?>" style="display:none;">
+            <input type="text" name="llegada" value="<?php echo $fechaLlegada ?>" style="display:none;">
+            <input type="text" name="salida" value="<?php echo $fechaSalida ?>" style="display:none;">
+            <div class="seccion">
+            <div class="datosPersonales">
+              <label for="nombre">Nombre: </label>
+              <input type="text" name="nombre" value="" placeholder="Como aparece en la tarjeta" id="nombre" required>
+              <label for="apelllido">Apellido: </label>
+              <input type="text" name="apellido" value="" placeholder="Como aparece en la tarjeta" id="apellido" required>
+              <label for="email">Correo: </label>
+              <input type="email" name="email" value="" placeholder="Ingresa tu correo" id="correo" required>
+            </div>
+          </div>
+          <div class="seccion">
+            <div class="tarjeta">
+              <label for="numTarjeta">Número de tarjeta: </label>
+              <input type="text" name="numTarjeta" value="" placeholder="    -  -  -  -  -  " id="numTarjeta" maxlength="16" required>
+              <label for="CCV">CCV</label>
+              <input type="text" name="CCV" value="" placeholder="3 dígitos de seguridad" id="ccv" maxlength="3" required>
+              <label for="fecha">Fecha de expiración: </label>
+              <input type="date" name="" value="" id="expiracion" required>
+            </div>
+          </div>
+          <div class="submit">
+            <button type="submit" name="button">Procesar pago</button>
+          </div>
           </form>
-
+        </div>
+        <div class="mensaje">
+          <h1>¡Estas a un paso de vivir una experiencia inolvidable!</h1>
         </div>
       </section>
+      <body>
+        <script src="../js/pagarRenta.js">
+
+        </script>
+</html>
