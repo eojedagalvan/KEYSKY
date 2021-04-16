@@ -40,11 +40,17 @@ loginForm.addEventListener("submit", function (evento) {
   formData.append("ubicacion", ubicacion);
   formData.append("costo", costo);
   formData.append("descripcion", descripcion);
-  formData.append("fotos", fotos);
+  formData.append("fotos0", fotos[0]);
+  formData.append("fotos1", fotos[1]);
+  formData.append("fotos2", fotos[2]);
+  formData.append("fotos3", fotos[3]);
+  formData.append("fotos4", fotos[4]);
+  formData.append("fotos5", fotos[5]);
 
   axios
     .post("../php/validarNuevoAlojamiento.php", formData)
     .then(function (respuesta) {
+      alert(respuesta.data);
       document.location.href= '../php/misAlojamientos.php';
     })
     .catch(function () {

@@ -13,7 +13,6 @@
   $ubicacion = $conexion->real_escape_string($_POST["ubicacion"]);
   $costo = $conexion->real_escape_string($_POST["costo"]);
   $descripcion = $conexion->real_escape_string($_POST["descripcion"]);
-  $imagenes = $conexion->real_escape_string($_FILES["archivo"]);
 
   $IdUsuario = "SELECT Id_Usuario from usuarios where correo = '$_SESSION[Correo]'";
   $resultadoUsuario = mysqli_query($conexion, $IdUsuario);
@@ -37,19 +36,21 @@
   $idAlojamiento = "Select Id_Alojamiento from alojamientos where Id_Usuario = 1 order by Id_Alojamiento DESC";
   $resultadoAl = mysqli_query($conexion, $idAlojamiento);
   $idAl = mysqli_fetch_assoc($resultadoAl);
+  $idAlojamiento = $idAl["Id_Alojamiento"];
+  echo "<script>alert($idAlojamiento)</script>";
+  //Subir imagenes a su correspondiente carpeta
+  $path = "../images/alojamientos/$nombre";
+  mkdir($path);
 
-  // $imagenes2 = $conexion->real_escape_string($_FILES["archivo"]["tmp_name"]);
-  //
-  // for ($i=1; $i <= $imagenes.length; $i++) {
-  //   $nombrearchivo = basename($_FILES["archivo"]["name"]);
-  //   $directorio="../KEYSKY/images/alojamientos/".$nombre;
-  //   if (!file_exists($directorio)) {
-  //     mkdir($directorio, 0777, true);
-  //   }
-  //   move_uploaded_file($imagenes2, $directorio."/".$nombrearchivo);
-  // //   $insertarImagenes = "INSERT into imagen (Id_Alojamiento, Imagen) values ('$idAl', '$nombrearchivo')";
-  // //   $resultadoImagenes = mysqli_query($conexion, $insertarImagenes);
-  // // }
+  for ($i=0; $i < 6; $i++) {
+  $nombre_base = $i+1 . '.jpg';
+  $consulta = "insert into imagen (Id_Alojamiento, imagen) VALUES ('$idAlojamiento', '$nombre_base')";
+  $resultado = mysqli_query($conexion, $consulta);
+  $ruta = "$path/" . $nombre_base;
+  echo "<script>alert($nombre_base)</script>";
+  $subirarchivo = move_uploaded_file($_FILES["fotos" . $i]["tmp_name"], $ruta);
+}
+
 
   mysqli_free_result($resultado);
   mysqli_free_result($resultadodueno);

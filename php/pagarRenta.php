@@ -81,8 +81,6 @@ $fechaSalida = $_GET['salida'];
           <h1>¡Estas a un paso de vivir una experiencia inolvidable!</h1>
         </div>
       </section>
-      <body>
-        <script src="../js/pagarRenta.js">
-
-        </script>
+      <script src="../js/pagarRenta.js"></script>
+    </body>
 </html>
