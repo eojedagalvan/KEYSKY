@@ -252,6 +252,17 @@ background: red;
   display: none;
 }
 
+/*****/
+
+.error {
+  color: #fff;
+  padding-left: 20px;
+}
+
+.error::before{
+  content: "*";
+}
+/*****/
 .container-slider {
   width: 90%;
   max-width: 1500px;
