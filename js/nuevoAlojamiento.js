@@ -50,7 +50,6 @@ loginForm.addEventListener("submit", function (evento) {
   axios
     .post("../php/validarNuevoAlojamiento.php", formData)
     .then(function (respuesta) {
-      alert(respuesta.data);
       document.location.href= '../php/misAlojamientos.php';
     })
     .catch(function () {
