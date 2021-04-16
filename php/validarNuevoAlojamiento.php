@@ -37,7 +37,6 @@
   $resultadoAl = mysqli_query($conexion, $idAlojamiento);
   $idAl = mysqli_fetch_assoc($resultadoAl);
   $idAlojamiento = $idAl["Id_Alojamiento"];
-  // echo "<script>alert($idAlojamiento)</script>";
   //Subir imagenes a su correspondiente carpeta
   $path = "../images/alojamientos/$nombre";
   mkdir($path);
@@ -47,7 +46,6 @@
   $consulta = "insert into imagen (Id_Alojamiento, imagen) VALUES ('$idAlojamiento', '$nombre_base')";
   $resultado = mysqli_query($conexion, $consulta);
   $ruta = "$path/" . $nombre_base;
-  // echo "<script>alert($nombre_base)</script>";
   $subirarchivo = move_uploaded_file($_FILES["fotos" . $i]["tmp_name"], $ruta);
 }
 
