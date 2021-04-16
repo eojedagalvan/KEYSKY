@@ -11,6 +11,8 @@ if ($filas < 1){
   echo "No se encontró el alojamiento";
   http_response_code(404);
 } else {
+  $consulta = "delete from imagen where Id_Alojamiento = '$Id_Alojamiento'";
+  $resultado = mysqli_query($conexion, $consulta);
   $consulta = "delete from alojamientos where Id_Alojamiento = '$Id_Alojamiento'";
   $resultado = mysqli_query($conexion, $consulta);
   $consulta = "Select * from alojamientos where Id_Usuario = '$alojamiento[Id_Usuario]'";
