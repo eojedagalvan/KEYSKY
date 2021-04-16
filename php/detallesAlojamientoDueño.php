@@ -50,26 +50,27 @@
     <section id="primeraSeccion">
       <h1>Tu alojamiento</h1>
       <div class="informacion">
-        <form class="" method="post">
+        <form class="" method="post" id="form-modificar">
         <div class="campo">
           <label for="nombre">Nombre: </label>
-          <input type="text" name="nombre" value="<?php echo $alojamiento["Nombre"] ?>" required disabled>
+          <input class="campos" type="text" name="nombre" id="nombre" value="<?php echo $alojamiento["Nombre"] ?>" required disabled>
         </div>
         <br>
         <div class="campo">
           <label for="ubicacion">Ubicación: </label>
-          <input type="text" name="ubicacion" value="<?php echo $alojamiento["Ubicación"] ?>" required disabled>
+          <input class="campos" type="text" name="ubicacion" id="ubicacion" value="<?php echo $alojamiento["Ubicación"] ?>" required disabled>
         </div>
         <br>
         <div class="campo">
           <label for="costo">Costo por noche: </label>
-          <input type="text" name="costo" value="<?php echo $alojamiento["Costo"] ?>" required disabled>
+          <input class="campos" type="text" name="costo" id="costo" value="<?php echo $alojamiento["Costo"] ?>" required disabled>
         </div>
         <br>
         <div class="campo">
           <label for="descripcion">Descripción: </label>
-            <textarea name="descripcion" rows="9" cols="65" disabled><?php echo $alojamiento["Descripción"] ?></textarea>
+            <textarea class="campos" name="descripcion" id="descripcion" rows="9" cols="65" disabled><?php echo $alojamiento["Descripción"] ?></textarea>
         </div>
+        <p class="error hide"></p>
         <div class="boton">
           <button type="click" name="button" class="" id="modificar">Modificar informacion</button>
         </div>
@@ -103,4 +104,5 @@
   <script src="../js/axios.min.js"></script>
   <script src="../js/eliminarAlojamiento.js"></script>
   <script src="../js/sliderManual.js"></script>
+  <script src="../js/validarAlojamiento.js"></script>
 </html>
